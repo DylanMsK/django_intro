@@ -7,9 +7,11 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Todo의 index</h1>
     {% for todo in todos %}
         <h2>{{todo.title}}</h2>
-        <h3>{{todo.deadline}}</h3><br>
+        <h3>{{todo.deadline}}</h3>
+        <a href="/todos/{{todo.id}}/">글보기</a>
     {% endfor %}
 </body>
 </html>

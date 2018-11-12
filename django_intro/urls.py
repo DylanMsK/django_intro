@@ -24,7 +24,7 @@ urlpatterns = [
     path('lunch/', views.lunch),
     path('lotto/', views.lotto),
     path('hello/<str:name>/', views.hello),
-    path('cube/<int:num>', views.cube),
+    path('cube/<int:num>/', views.cube),
     # 인자 컨버터
     # str: default
     # int: 0 또는 양의정수

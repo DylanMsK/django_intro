@@ -1,6 +1,7 @@
-{%extends 'todo/base.html%}
-{%block boby_block%}
-    <form action='' method='post'>
+{% extends 'todo/base.html' %}
+{% block body_block %}
+    <form action='/todos/create/' method='post'>
+      {% csrf_token %}
       <div class="form-group">
         <label for="title">Title</label>
         <input type="text" class="form-control" id="title" name='title' placeholder="Enter todo">
@@ -10,4 +11,4 @@
         <input type="date" class="form-control" id="deadline" name='deadline'>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-{%endblock%}
+{% endblock %}
