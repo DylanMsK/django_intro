@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+{%extends 'todo/base.html'%}
+{%block body_block%}
+    <a href="/todos/new/">글작성</a><br>
+    <a href="/todos/todo_create/">합쳐진 로직</a>
     <h1>Todo의 index</h1>
     {% for todo in todos %}
-        <h2>{{todo.title}}</h2>
-        <h3>{{todo.deadline}}</h3>
-        <a href="/todos/{{todo.id}}/">글보기</a>
+        <a href='/todos/{{todo.id}}/'><h3>{{todo.title}}</h3></a>
+        <h4>{{todo.deadline}}</h4>
+        <a href="/todos/{{todo.id}}/delete/">삭제</a>
+        <a href="/todos/{{todo.id}}/update/">수정</a><br>
     {% endfor %}
-</body>
-</html>
+{%endblock%}
